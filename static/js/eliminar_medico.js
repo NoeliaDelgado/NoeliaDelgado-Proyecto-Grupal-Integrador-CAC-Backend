@@ -1,6 +1,5 @@
 function eliminar(id) {
     let url ="https://silvinadelgado.pythonanywhere.com/borrar/" + id;     
-   // let url = 'https://paginadeventas.pythonanywhere.com/borrar/'+id;
     var options = {
         method: 'DELETE',
         

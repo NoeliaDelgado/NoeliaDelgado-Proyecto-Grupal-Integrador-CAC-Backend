@@ -13,7 +13,8 @@ CORS(app)
 app.config['SECRET_KEY'] = '7110c8ae51a4b5af97be6534caef90e4bb9bdcb3380af008f90b23a5d1616bf319bc298105da20fe'
 # Configurar a la app la DB
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://usuario:contraseña@localhost:3306/nombre_de_la_base_de_datos'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@localhost:3306/db_medicos'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@localhost:3306/db_medicos'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://silvinadelgado:cacmedical@silvinadelgado.mysql.pythonanywhere-services.com/silvinadelgado$default'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
