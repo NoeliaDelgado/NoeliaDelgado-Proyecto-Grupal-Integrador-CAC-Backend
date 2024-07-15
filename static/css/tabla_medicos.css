@@ -41,9 +41,6 @@ td img {
             padding: 10px 20px; 
         }
 
-        .boton-modificar, .boton-borrar{
-            font-size: 120px;
-        }
         
     }
         @media only screen and (min-width: 992px) {

@@ -16,7 +16,7 @@ function modificar() {
 
     console.log(datos);
 
-    let url = "http://localhost:5000/update/" + id;
+    let url = "https://silvinadelgado.pythonanywhere.com/update/" + id;
     // let url = "https://paginadeventas.pythonanywhere.com/update/"+id aca pongo mi url de python anywhere
     
     let options = {

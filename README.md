@@ -39,10 +39,10 @@ Relación uno a muchos con Especialidad (cada especialidad médica puede estar a
 |-----------------------|-------------|------------------------------------------------------------------------------------------|
 | /registro             | POST        | Crea un nuevo registro de médico.                                                         |
 | /medicos              | GET         | Retorna todos los médicos y sus especialidades.                                            |
-| /update/<id>          | PUT         | Modifica un registro de médico por ID.                                                    |
-| /borrar/<id>          | DELETE      | Elimina un registro de médico por ID.                                                     |
+| /update/id          | PUT         | Modifica un registro de médico por ID.                                                    |
+| /borrar/id          | DELETE      | Elimina un registro de médico por ID.                                                     |
 | /                    | GET         | Renderiza la página de inicio.                                                            |
-| /especialidades       | GET         | Renderiza la página de especialidades o crea un nuevo médico si el usuario está autenticado.|
+| /especialidades       | GET         | Renderiza la página de especialidades ó crea un nuevo médico si el usuario está autenticado.|
 | /login                | GET, POST   | Maneja el inicio de sesión.                                                               |
 | /logout               | GET         | Cierra la sesión del usuario.                                                             |
 

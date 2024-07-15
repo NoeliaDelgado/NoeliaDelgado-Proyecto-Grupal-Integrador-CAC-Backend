@@ -15,7 +15,7 @@ function guardar() {
 
     console.log(datos);
 
-    let url = "http://localhost:5000/registro";
+    let url = "https://silvinadelgado.pythonanywhere.com/registro";
     //let url = "https://paginadeventas.pythonanywhere.com/registro"
     var options = {
         body: JSON.stringify(datos),
