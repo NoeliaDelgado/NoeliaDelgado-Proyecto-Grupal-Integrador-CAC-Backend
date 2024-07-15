@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="CAC Medical, clinica, consultorios, Buenos Aires, Médicos">
+    <meta name="description" content="Somos una clínica especializada que proporciona servicios médicos integrales y tratamientos personalizados para satisfacer las necesidades de salud de sus pacientes.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <script src="https://kit.fontawesome.com/283daa4351.js" crossorigin="anonymous"></script>
+    <title>CAC MEDICAL</title>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'nav.html' %}
+
+    <aside>
+        <a href="{{ url_for('turnos') }}" class="btn-turno">Solicitar turno</a>
+    </aside>
+
+    <main>
+        <!--Slider-->
+        <div class="slider">
+            <ul>
+                <li><img src="{{ url_for('static', filename='images/slider/slider1.jpg') }}" alt="slider1"></li>
+                <li><img src="{{ url_for('static', filename='images/slider/slider2.jpg') }}" alt="slider2"></li>
+                <li><img src="{{ url_for('static', filename='images/slider/slider3.jpg') }}" alt="slider3"></li>
+                <li><img src="{{ url_for('static', filename='images/slider/slider4.jpg') }}" alt="slider4"></li>
+            </ul>
+        </div>  
+
+        <section id="opiniones">
+            <h1 class="titulo-opiniones">Opiniones de nuestros pacientes</h1>
+
+            <div class="opiniones-box-container">
+                <!-- box 1 -->
+                <div class="opiniones-box">
+                    <div class="box-top">
+                        <div class="user"></div>
+                        <div class="user-img">
+                            <img src="{{ url_for('static', filename='images/opiniones/opiniones1.png') }}" alt="foto-de-perfil">
+                        </div>
+                        <div class="user-name">
+                            <strong>Jane Doe</strong>
+                            <span>@janedoe</span>
+                        </div>
+                        <div class="opiniones">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="user-comment">
+                        <p>
+                            Excelente experiencia en la clínica CAC Medical. El personal es amable y profesional, y las instalaciones están impecables. Recomiendo al 100% sus servicios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- box 2 -->
+                <div class="opiniones-box">
+                    <div class="box-top">
+                        <div class="user"></div>
+                        <div class="user-img">
+                            <img src="{{ url_for('static', filename='images/opiniones/opiniones2.png') }}" alt="foto-de-perfil">
+                        </div>
+                        <div class="user-name">
+                            <strong>Pepita SK</strong>
+                            <span>@pepitask</span>
+                        </div>
+                        <div class="opiniones">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="user-comment">
+                        <p>
+                            Todo de 10 como siempre. El médico fue muy detallado en su explicación y me dio opciones para mi tratamiento. Definitivamente recomiendo esta clínica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- box 3 -->
+                <div class="opiniones-box">
+                    <div class="box-top">
+                        <div class="user"></div>
+                        <div class="user-img">
+                            <img src="{{ url_for('static', filename='images/opiniones/opiniones3.png') }}" alt="foto-de-perfil">
+                        </div>
+                        <div class="user-name">
+                            <strong>Fufa Mel</strong>
+                            <span>@fufamel</span>
+                        </div>
+                        <div class="opiniones">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="user-comment">
+                        <p>
+                            Fantástica esta clínica nueva acá en Buenos Aires, hacía falta un establecimiento así. Desde que entré, me sentí bienvenida y cuidada por todo su personal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+    <script src="{{ url_for('static', filename='js/menu_responsive.js') }}"></script>
+</body>
+
+</html>

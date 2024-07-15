@@ -1,0 +1,55 @@
+td img {
+    width: 20px;
+}
+    .modificar{
+        background-color: #4CAF50; 
+        color: white; 
+        padding: 5px 10px; 
+        text-align: center; 
+        text-decoration: none;
+        display: inline-block; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        font-size: 10px;
+    }
+
+    .boton-modificar, .boton-borrar{
+        background-color: #67b1e3; 
+        color: white; 
+        padding: 3px 5px; 
+        text-align: center; 
+        text-decoration: none;
+        display: inline-block; 
+        border: none; 
+        border-radius: 2px; 
+        cursor: pointer; 
+        font-size: 15px;
+    }
+
+    .boton-borrar{
+        background-color: #f3562b; 
+    }
+
+
+    @media only screen and (min-width: 480px) {
+        td img {
+            width: 80px;
+        }
+        .modificar{
+            font-size: 18px;
+            padding: 10px 20px; 
+        }
+
+        .boton-modificar, .boton-borrar{
+            font-size: 120px;
+        }
+        
+    }
+        @media only screen and (min-width: 992px) {
+            td img {
+                width: 120px;
+            }
+
+        }
+    

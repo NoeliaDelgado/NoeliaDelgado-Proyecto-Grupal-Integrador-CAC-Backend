@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <script src="https://kit.fontawesome.com/283daa4351.js" crossorigin="anonymous"></script>
+    <title>Contacto | CAC MEDICAL</title>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'nav.html' %}
+
+    <aside>
+        <a href="{{ url_for('turnos') }}" class="btn-turno">Solicitar turno</a>
+    </aside>
+
+    <main>
+        <div class="contactos">
+            <section id="mapa">
+                <!-- MAPA -->
+                <div id="c1" class="maps">
+                    <h2 class="titulo-ubicacion">Nuestra ubicación</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.562621196938!2d-58.38196390321049!3d-34.6152199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccad5e3c692e1%3A0x6f64515556e552da!2sM%C3%A9xico%20782%2C%20C1097AAP%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1715106344975!5m2!1ses!2sar" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="ubicacion"></iframe>
+                </div>
+            </section>
+
+            <!-- LISTA PARA CONTACTARNOS -->
+            <div class="columna2">
+                <section class="contactanos">
+                    <div>
+                        <h2 class="titulo-contactos">Contactanos</h2>
+                        <p>- México 782, Ciudad Autónoma de Buenos Aires</p>
+                        <p>- 0800-210-4243</p>
+                        <p>- Turnos telefónicos de Lunes a Viernes de 8 a 18hs</p>
+                        <p>- Mesa operativa para derivaciones de internados 24hs</p>
+                    </div>
+                </section>
+
+                <!-- VISITAS -->
+                <section class="contactanos">
+                    <div>
+                        <h2>Horarios de visitas</h2>
+                        <p>- Internación general: 9hs a 11hs - 17hs a 19hs</p>
+                        <p>- Pediatría: 17hs a 19hs</p>
+                        <p>- Neonatología: 13hs a 19hs </p>
+                        <p>- Terapia: 9hs a 11hs</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+    <script src="{{ url_for('static', filename='js/menu_responsive.js') }}"></script>
+</body>
+
+</html>

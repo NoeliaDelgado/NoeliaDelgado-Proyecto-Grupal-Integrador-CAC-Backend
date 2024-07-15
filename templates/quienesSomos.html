@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <title>Quienes somos | CAC MEDICAL</title>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'nav.html' %}
+
+    <aside>
+        <a href="{{ url_for('turnos') }}" class="btn-turno">Solicitar turno</a>
+    </aside>
+
+    <main>
+        <section class="quienes-somos1">
+            <h1>Quiénes Somos</h1>
+            <p>CAC Medical es una clínica líder en Buenos Aires dedicada a proporcionar atención médica de calidad con
+                un enfoque integral y personalizado. Nuestro compromiso con la excelencia médica y el bienestar de
+                nuestros pacientes nos distingue. Con un equipo multidisciplinario de profesionales altamente
+                capacitados y tecnología de vanguardia, nos esforzamos por ofrecer servicios médicos de última
+                generación en un ambiente cálido y acogedor. En CAC Medical, nuestra misión es promover la salud y el
+                bienestar en la comunidad, brindando atención médica confiable y compasiva a cada paciente que confía en
+                nosotros.</p>
+
+            <div class="video-cac">
+                <video src="{{ url_for('serve_assets', filename='video/cacmedical.mp4') }}" controls></video>
+            </div>
+        </section>
+
+        <section class="quienes-somos1">
+            <h2>Historia y Valores</h2>
+            <div class="card">
+                <p> Fundada en 1998 por un equipo de médicos visionarios, CAC Medical nació con la misión de
+                    proporcionar atención médica de alta calidad y accesible en Buenos Aires. Lo que comenzó como una
+                    clínica modesta ha crecido hasta convertirse en un referente en el campo de la medicina en
+                    Argentina. A lo largo de los años, hemos expandido nuestras instalaciones y servicios para
+                    satisfacer las necesidades cambiantes de nuestra comunidad, manteniendo siempre nuestro compromiso
+                    con la excelencia médica y la atención centrada en el paciente.</p>
+            </div>
+
+            <div class="card">
+                <p> En CAC Medical, nuestros valores fundamentales guían cada aspecto de nuestro trabajo y nuestras
+                    interacciones, es por ello que nuestros valores se basan en la Excelencia en todas nuestras áreas de
+                    atención médica, desde la precisión en los diagnósticos hasta la calidad de los tratamientos y la
+                    satisfacción del paciente. Demostrando compasión y empatía en todo momento y respetando la dignidad
+                    y autonomía, actuando con honestidad y rectitud en todas las interacciones profesionales,
+                    manteniendo altos estándares éticos y cumpliendo con todas las regulaciones y normativas médicas.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+    <script src="{{ url_for('static', filename='js/menu_responsive.js') }}"></script>
+</body>
+
+</html>

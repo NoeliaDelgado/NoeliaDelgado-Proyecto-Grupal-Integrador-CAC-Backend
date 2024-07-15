@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <title>Especialidades | CAC MEDICAL</title>
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+    {% include 'nav.html' %}
+
+    <aside>
+        <a href="{{ url_for('turnos') }}" class="btn-turno">Solicitar turno</a>
+    </aside>
+    <main>
+        <section id="section-especialidades">
+            <p>CAC Medical ofrece una amplia gama de especialidades médicas:</p>
+         <div class="especialidades-container">
+                {% for e in especialidades %}
+                <div class="especialidades">
+                    <div class="encabezado">
+                        <h1> {{ e.especialidad.especialidad }} </h1>
+                        <button class='ver-mas'>
+                            <img src="{{ url_for('static', filename='images/arrow.svg') }}" class="arrow" alt="Ver-mas">
+                        </button>
+                    </div>
+                    <div class="oculto">
+                        {% for m in e.medicos %}
+                        <div class="ficha">
+                            <img src="{{ m.foto }}" alt="{{ m.nombre }}">
+                            <div class="descripcion">
+                                <h2>{{ m.nombre }}</h2>
+                                <p class="descripcion">
+                                    {{ m.descripcion }}
+                                </p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+          </div>
+        </section>
+    </main>
+
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/menu_responsive.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ver_mas.js') }}"></script>
+</body>
+
+</html>

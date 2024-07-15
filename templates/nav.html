@@ -1,0 +1,18 @@
+<nav>
+    <ul class="menuResponsive">
+        <li><a href="{{ url_for('index') }}"><img class="btn-inicio" src="{{ url_for('static', filename='images/inicio.svg') }}" alt="Inicio"></a></li>
+        <li><a><img class="btn-menuResponsive" src="{{ url_for('static', filename='images/menuHamburguesa.svg') }}" alt="Menú"></a></li>
+    </ul>
+    <ul class="menu">
+        <li class="item-nav"><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li class="item-nav"><a href="{{ url_for('quienesSomos') }}">Quiénes somos</a></li>
+        <li class="item-nav"><a href="{{ url_for('especialidades') }}">Especialidades</a></li>
+        <li class="item-nav"><a href="{{ url_for('coberturas') }}">Cobertura</a></li>
+        <li class="item-nav"><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        {% if session['logged_in'] %}
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        {% endif %}
+    </ul>
+</nav>

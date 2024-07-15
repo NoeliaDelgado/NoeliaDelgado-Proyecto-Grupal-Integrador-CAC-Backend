@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <title>Solicitar turno | CAC MEDICAL</title>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% include 'nav.html' %}
+
+    <main>
+        <form id="form" action="https://formspree.io/f/xleqkgyz" method="POST">
+            <div class="form-elements">
+                <label for="nombre">Nombre: </label>
+                <input name="nombre" id="nombre" type="text" value="" placeholder="Nombre">
+                <label for="apellido">Apellido: </label>
+                <input name="apellido" id="apellido" type="text" value="" placeholder="Apellido">
+                <label for="dni">DNI: </label>
+                <input name="dni" id="dni" type="number" value="" placeholder="DNI" required>
+                <label for="email">E-Mail: </label>
+                <input name="email" id="email" type="email" value="" placeholder="E-Mail" required>
+                <label for="telefono">Teléfono: </label>
+                <input name="telefono" id="telefono" type="tel" value="" placeholder="Teléfono">
+                <label for="especialidades">Especialidades:</label>
+                <select id="especialidades" name="especialidades">
+                    <option disabled selected>Elija Especialidad</option>
+                    <option>Cardiología</option>
+                    <option>Endocrinología</option>
+                    <option>Gastroenterología</option>
+                    <option>Ginecología y Obstetricia</option>
+                    <option>Infectología</option>
+                    <option>Laboratorio de Análisis Clínicos</option>
+                    <option>Odontología</option>
+                    <option>Oftalmología</option>
+                    <option>Otorrinolaringología</option>
+                    <option>Pediatría</option>
+                    <option>Traumatología</option>
+                </select>
+                <label>¿Tiene obra social?</label>
+                <span class="radio">
+                    <input type="radio" id="obraSocialSi" name="obraSocial">
+                    <label for="obraSocialSi">Si</label>
+                    <input type="radio" id="obraSocialNo" name="obraSocial">
+                    <label for="obraSocialNo">No</label>
+                </span>
+            </div>
+
+            <div class="form-elements2">
+                <div class="box-mensaje">
+                    <textarea placeholder="Mensaje"></textarea>
+                </div>
+
+                <div class="seccion-captcha">
+                    <img class="img-captcha" src="">
+                    <img class="img-recargar" src="{{ url_for('static', filename='images/img-recargar.svg') }}"
+                        alt="recargar-captcha">
+                    <label>Escriba el texto que ve en la imagen:</label>
+                    <input class="inp-captcha" type="text" value="">
+                </div>
+                <div id="error"></div>
+                <input type="submit" value="Enviar" name="enviar">
+                <div class="alerta"> </div>
+            </div>
+        </form>
+    </main>
+
+    {% include 'footer.html' %}
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/menu_responsive.js') }}"></script>
+</body>
+
+</html>

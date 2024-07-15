@@ -1,0 +1,13 @@
+# Ignorar directorios
+/.cache/
+/.vscode/
+/node_modules/
+/yarn.lock
+**/venv
+
+# Ignorar archivos
+*.log
+*.tmp
+*.exe
+
+--pycache--
